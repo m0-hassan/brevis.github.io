@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Brevis | UChicago Integrated with AI | Winter Tech Showcase 2024
+    </title>
+    <meta name="author" content="Codegrid" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/loader.css" />
+
+    <!-- menu -->
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+
+    <!-- sections -->
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/services.css" />
+    <link rel="stylesheet" href="./css/promo.css" />
+    <link rel="stylesheet" href="./css/projects.css" />
+    <link rel="stylesheet" href="./css/prices-hero.css" />
+    <link rel="stylesheet" href="./css/prices.css" />
+    <link rel="stylesheet" href="./css/features.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
+    <!-- icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- spline  -->
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
+    ></script>
+
+    <!-- DIALOGFLOW CHATBOT STYLESHEET -->
+    <link
+      rel="stylesheet"
+      href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
+    />
+
+    <!-- DIALOGFLOW CHATBOT SCRIPT -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
+  </head>
+  <body>
+    <!-- loader -->
+    <div class="loader">
+      <div class="loader-copy">
+        <p id="loader-copy-1">Loading in progress</p>
+        <p id="loader-copy-2">A few seconds please</p>
+        <p id="loader-copy-3">Almost done</p>
+      </div>
+      <div class="progress-bar"></div>
+    </div>
+
+    <!-- navbar -->
+    <nav>
+      <div class="logo">
+        <a href="#hero"><img src="./assets/site-logo.png" alt="" /></a>
+      </div>
+
+      <div class="clock">
+        <p>
+          ON
+          <span id="currentTime"></span>
+        </p>
+      </div>
+
+      <div class="ctas">
+        <div class="contact">
+          <div class="contact-icon">
+            <ion-icon name="ellipse-sharp"></ion-icon>
+          </div>
+          <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">Let's talk</a>
+        </div>
+
+        <div class="menu">
+          <div class="menu-icon">
+            <ion-icon name="close-sharp"></ion-icon>
+          </div>
+          <p>Menu</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- menu links -->
+    <div class="menu-container">
+      <div class="whitespace"></div>
+      <div class="whitespace"></div>
+      <div class="menu-items">
+        <a href="#about" class="menu-item">
+          <span>01</span>
+          <span>Who we are</span>
+        </a>
+        <a href="#services" class="menu-item">
+          <span>02</span>
+          <span>Our Frameworks</span>
+        </a>
+        <a href="#cases" class="menu-item">
+          <span>03</span>
+          <span>About</span>
+        </a>
+        <a href="#prices" class="menu-item">
+          <span>04</span>
+          <span>Summary</span>
+        </a>
+        <a href="#contact" class="menu-item">
+          <span>05</span>
+          <span>Contact</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- website content -->
+    <div class="container">
+      <!-- hero section -->
+      <section class="hero" id="hero">
+        <div class="hero-img"><img src="./assets/grad.png" alt="" /></div>
+
+        <div class="hero-header">
+          <div class="hero-col">
+            <h1>Brevis</h1>
+          </div>
+          <div class="hero-col">
+            <p id="site-intro">
+                Brevis is a platform that utilizes a custom LLM
+              to synthesize complex answers to student queries
+              regarding the academic and professional landscape @ UChicago.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- about -->
+      <section class="about" id="about">
+        <div class="about-header">
+          <div class="about-col">
+            <p class="callout">How can we help</p>
+          </div>
+          <div class="about-col">
+            <h2>
+              We take advantage of AI to help UChicago students academically and professionally.
+              <span style="opacity: 0">.</span>
+            </h2>
+
+            <p class="about-copy">
+              Our team focuses on creating a LLM that can compress all
+              of the various resources for undergraduates at UChicago at the click of a button.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- services -->
+      <section class="services" id="services">
+        <div class="services-col">
+          <p class="callout">What we worked with</p>
+        </div>
+        <div class="services-col">
+          <div class="services-row">
+            <div class="service-item">
+              <div class="service-icon">
+                <ion-icon name="file-tray-full-outline"></ion-icon>
+              </div>
+              <div class="service-title">
+                <p>UCHICAGO CATALOG</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <ion-icon name="layers-sharp"></ion-icon>
+              </div>
+              <div class="service-title">
+                <p>DESIGN</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <ion-icon name="logo-css3"></ion-icon>
+              </div>
+              <div class="service-title">
+                <p>CSS</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <ion-icon name="logo-javascript"></ion-icon>
+              </div>
+              <div class="service-title">
+                <p>JAVA</p>
+              </div>
+            </div>
+          </div>
+          <div class="services-row">
+            <div class="service-item">
+              <div class="service-icon">
+                <ion-icon name="logo-python"></ion-icon>
+              </div>
+              <div class="service-title">
+                <p>PYTHON</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <ion-icon name="logo-html5"></ion-icon>
+              </div>
+              <div class="service-title">
+                <p>HTML</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <ion-icon name="cloud-sharp"></ion-icon>
+              </div>
+              <div class="service-title">
+                <p>GOOGLE CLOUD</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <ion-icon name="cube-sharp"></ion-icon>
+              </div>
+              <div class="service-title">
+                <p>R.A.G</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- promo  -->
+      <section class="promo" id="cases">
+        <div class="promo-bg">
+          <img src="./assets/grad.png" alt="" />
+        </div>
+        <div class="promo-header">
+          <h2>LEARN</h2>
+          <h2>MORE ABOUT</h2>
+          <h1>BREVIS</h1>
+        </div>
+      </section>
+
+      <!-- projects -->
+      <section class="sticky-cards">
+        <section class="projecr-hero pinned"></section>
+
+        <section class="card pinned">
+          <div class="project">
+            <div class="project-copy">
+              <div class="project-header">
+                <h3>Background</h3>
+                <p>01 - 01</p>
+              </div>
+              <p>
+                Brevis uses RAG (Real Augmented Generation) an LLM API, allowing us to finetune responses which allows for greater adaptability, security, and control over the data it processes.
+                By developing its own LLM, Brevis can optimize its system for highly specialized tasks and domain-specific insights, ensuring the highest levels of performance and reliability.
+              </p>
+              <div class="project-cta"></div>
+            </div>
+            <div class="project-img">
+              <img src="./assets/project-1.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="card pinned">
+          <div class="project">
+            <div class="project-copy">
+              <div class="project-header">
+                <h3>Background</h3>
+                <p>01 - 02</p>
+              </div>
+              <p>
+                Transitioning to college, especially at an institution like UChicago, can be a challenge for first-year students.
+                These challenges range from academic adjustments to forming essential connections for career development. These
+                considerations underscore the importance of a system designed to provide guidance tailored to both the academic and personal
+                aspects of student life.
+              </p>
+              <div class="project-cta"></div>
+            </div>
+            <div class="project-img">
+              <img src="./assets/project-2.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="card pinned">
+          <div class="project">
+            <div class="project-copy">
+              <div class="project-header">
+                <h3>Background</h3>
+                <p>01 - 03</p>
+              </div>
+              <p>
+                While pre-orientation programs, the college catalog, and the academic advisor service provide foundational support,
+                there is still ample room to enrich the onboarding experience through more immediate, targeted, and personalized advice.
+                By leveraging AI and emerging technologies, students can receive just-in-time information and direction that helps them
+                make informed decisions about their academic pathways. Moreover, these tools can also reduce the wait times and resource
+                limitations often associated with traditional advising channels, ensuring a more equitable experience for all students.
+              </p>
+              <div class="project-cta"></div>
+            </div>
+            <div class="project-img">
+              <img src="./assets/project-3.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="card pinned">
+          <div class="project">
+            <div class="project-copy">
+              <div class="project-header">
+                <h3>Background</h3>
+                <p>01 - 04</p>
+              </div>
+              <p>
+                Our project introduces a digital advisor application that leverages artificial intelligence to offer personalized guidance
+                to incoming undergraduates. By harnessing cutting-edge algorithms and data analytics, this system can provide
+                recommendations for course selections, extracurricular involvement, and essential campus resources. Ultimately,
+                the goal is to empower students to navigate the complexities of their new environment with confidence, ensuring
+                they have the support needed to thrive academically and professionally.
+              </p>
+              <div class="project-cta"></div>
+            </div>
+            <div class="project-img">
+              <img src="./assets/project-4.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="card pinned">
+          <div class="project">
+            <div class="project-copy">
+              <div class="project-header">
+                <h3>Background</h3>
+                <p>01 - 05</p>
+              </div>
+              <p>
+                This AI chatbot analyzes data pulled from several UChicago-specific resources, including the college catalog,
+                Registered Student Organization (RSO) websites, course reviews, student surveys, and more. By compiling and interpreting
+                this information, the chatbot can provide nuanced answers that directly address the user's unique questions and
+                challenges. The system’s capacity to learn from user interactions also allows it to refine its responses over time,
+                growing increasingly adept at offering the most relevant guidance possible.
+              </p>
+              <div class="project-cta"></div>
+            </div>
+            <div class="project-img">
+              <img src="./assets/project-5.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="card scroll">
+          <div class="project">
+            <div class="project-copy">
+              <div class="project-header">
+                <h3>Background</h3>
+                <p>01 - 06</p>
+              </div>
+              <p>
+                Students will interact with this advisor through an intuitive interface accessible via web and mobile platforms,
+                ensuring they receive context-aware support. This approach not only aids in smoothing their transition
+                but also helps in laying a robust foundation for their academic and professional careers.
+              </p>
+              <div class="project-cta"></div>
+            </div>
+            <div class="project-img">
+              <img src="./assets/project-6.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="footer"></section>
+      </section>
+
+      <!-- prices  -->
+      <section class="prices-hero" id="prices">
+        <div class="prices-bg">
+          <img src="./assets/grad.png" alt="" />
+        </div>
+        <div class="prices-hero-header">
+          <h1>BEGIN YOUR JOURNEY</h1>
+          <h3>USING BREVIS</h3>
+        </div>
+      </section>
+
+      <!-- prices -->
+      <section class="prices">
+        <div class="prices-header">
+          <div class="prices-col"></div>
+          <div class="prices-col">
+            <h2>
+              Below, you can access Brevis and a multitude of UChicago resources at the sending of a query.
+              <span style="opacity: 0">.</span>
+            </h2>
+          </div>
+        </div>
+        <div class="prices-cta">
+          <a href="#">
+            <h1>TALK NOW</h1>
+          </a>
+        </div>
+      </section>
+
+      <!-- features -->
+      <section class="features">
+        <div class="features-col">
+          <div class="features-row">
+            <div class="features-item">
+              <div class="features-icon">
+                <img src="./assets/feature-1.png" alt="" />
+              </div>
+              <div class="features-title">
+                <h2>MOTIVATION</h2>
+                <p>
+                  We wanted to build Brevis because we feel the key
+                  to success is having easy access to knowledge
+                  and resources critical for your success academically and profesionally.
+                </p>
+              </div>
+            </div>
+            <div class="features-item">
+              <div class="features-icon">
+                <img src="./assets/feature-2.png" alt="" />
+              </div>
+              <div class="features-title">
+                <h2>LAST YEAR</h2>
+                <p>
+                  We utilized Google Gemini API, but we ran into a multitude of issues of creating
+                  consistent responses in line with our goals with Brevis. We opted for utilizing RAG for
+                  the chatbot and kept Google Gemini to generate academic schedules.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="features-row">
+            <div class="features-item">
+              <div class="features-icon">
+                <img src="./assets/feature-3.png" alt="" />
+              </div>
+              <div class="features-title">
+                <h2>FRONT END</h2>
+                <p>
+                  Part of creating an excellent application is presenting it in a clean and
+                  aesthetic manner, this time around we focused heavily on presentation using classic HTML & Javascript
+                  rather than React.
+                </p>
+              </div>
+            </div>
+            <div class="features-item">
+              <div class="features-icon">
+                <img src="./assets/feature-4.png" alt="" />
+              </div>
+              <div class="features-title">
+                <h2>RAG</h2>
+                <p>
+                  For better, more consistent responses we used Retrieval-augmented generation (RAG), a a technique
+                  for enhancing the accuracy and reliability of generative AI models with facts fetched from external sources.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer  -->
+      <footer id="contact">
+        <div class="footer-bg">
+          <img src="./assets/grad.png" alt="" />
+        </div>
+        <div class="footer-header">
+          <h1>Let's</h1>
+          <h1>Talk</h1>
+        </div>
+        <div class="footer-sub-header">
+          <h2>Fill the form</h2>
+          <h2>and</h2>
+          <h2>Get in touch</h2>
+        </div>
+
+          <div class="footer-ctas-col">
+            <div class="footer-cta-icon">
+              <a href="#hero"><ion-icon name="arrow-up-sharp"></ion-icon></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-form">
+          <div class="form-col">
+            <div class="form-row">
+              <input type="text" placeholder="Your Name" />
+            </div>
+            <div class="form-row">
+              <input type="text" placeholder="Email" />
+            </div>
+            <div class="form-row">
+              <textarea name="" rows="4" placeholder="Message" id=""></textarea>
+            </div>
+          </div>
+
+          <div class="form-col">
+            <div class="submit-btn">
+              <h3>Send</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p>Brevis</p>
+          <p>Privacy Policy</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scroll / GSAP scripts -->
+    <script src="https://unpkg.com/lenis@1.1.4/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+
+    <script src="./js/loader.js"></script>
+    <script src="./js/lenis.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/about.js"></script>
+    <script src="./js/projects.js"></script>
+    <script src="./js/prices.js"></script>
+
+    <script>
+      // Smooth scrolling on anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+
+    <!-- DIALOGFLOW CHATBOT COMPONENT -->
+    <df-messenger
+      project-id="x-pathway-430521-f0"
+      agent-id="9358204f-f91c-46ef-8867-23612db4ff82"
+      language-code="en"
+      max-query-length="-1"
+    >
+      <df-messenger-chat-bubble chat-title="Brevis Chatbot">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+
+    <!-- OPTIONAL DIALOGFLOW CHATBOT STYLING -->
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        --df-messenger-font-color: #000;
+        --df-messenger-font-family: "Google Sans", sans-serif;
+        --df-messenger-chat-background: #f3f6fc;
+        --df-messenger-message-user-background: #d3e3fd;
+        --df-messenger-message-bot-background: #fff;
+        bottom: 16px;
+        right: 16px;
+      }
+    </style>
+
+  </body>
+</html>
